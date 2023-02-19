@@ -1,7 +1,7 @@
 Select * from Personals;
 
 Select * from Personals
-where Befattning = 'Lärare';
+where Befattning = 'LÃ¤rare';
 
 Select * from Betygs
 where Datum >= '2023-01-19'
