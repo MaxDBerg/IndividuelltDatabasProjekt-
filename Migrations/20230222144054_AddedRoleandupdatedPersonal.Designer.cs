@@ -4,6 +4,7 @@ using Labb3._1Database.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Labb3._1Database.Migrations
 {
     [DbContext(typeof(DatabaseDBContext))]
-    partial class DatabaseDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230222144054_AddedRoleandupdatedPersonal")]
+    partial class AddedRoleandupdatedPersonal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,7 +36,7 @@ namespace Labb3._1Database.Migrations
                     b.Property<int>("Betygbetyg")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("Datum")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("KursID")
@@ -64,7 +67,7 @@ namespace Labb3._1Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Namn")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -80,10 +83,7 @@ namespace Labb3._1Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<bool>("Activ")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Namn")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -102,13 +102,10 @@ namespace Labb3._1Database.Migrations
                     b.Property<DateTime>("DateEmployed")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("Namn")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PersonNumber")
+                    b.Property<string>("Personnum")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoleID")
@@ -148,16 +145,16 @@ namespace Labb3._1Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<string>("Efternamn")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("KlassID")
                         .HasColumnType("int");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("Namn")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PersonNumber")
+                    b.Property<string>("Personnummer")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

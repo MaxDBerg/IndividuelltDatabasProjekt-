@@ -11,6 +11,7 @@ namespace Labb3._1Database.Models
     {
         [Key]
         public int ID { get; set; }
-        public string Namn { get; set; }
+        public string Name { get; set; }
+        public bool Activ { get; set; }
     }
 }

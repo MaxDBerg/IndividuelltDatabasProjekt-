@@ -11,8 +11,12 @@ namespace Labb3._1Database.Models
     {
         [Key]
         public int ID { get; set; }
-        public string Namn { get; set; }
-        public string Personnum { get; set; }
-        public string Befattning { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PersonNumber { get; set; }
+        public decimal Salary { get; set; }
+        public DateTime DateEmployed { get; set; }
+        public int RoleID { get; set; }
+        public Role Role { get; set; }
     }
 }

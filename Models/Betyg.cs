@@ -17,7 +17,7 @@ namespace Labb3._1Database.Models
         public Personal Personal { get; set; }
         public int KursID { get; set; }
         public Kurs Kurs { get; set; }
-        public DateTime Datum { get; set; }
+        public DateTime Date { get; set; }
         public int Betygbetyg { get; set; }
     }
 }

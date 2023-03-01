@@ -16,6 +16,7 @@ namespace Labb3._1Database.Data
         public DbSet<Kurs> Kurses { get; set; }
         public DbSet<Personal> Personals { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Role> Roles { get; set; }    
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

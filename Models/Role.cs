@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace Labb3._1Database.Models
 {
-    public class Student
+    public class Role
     {
         [Key]
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string PersonNumber { get; set; }
-        public int KlassID { get; set; }
-        public Klass Klass { get; set; }
+        public string RoleName { get; set; }
     }
 }
